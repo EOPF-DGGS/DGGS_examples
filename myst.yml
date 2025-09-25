@@ -1,0 +1,101 @@
+# MyST Configuration for Jupyter Book 2.*
+version: 1
+project:
+  title: "DGGS@BiDS'25"
+  subtitle: "Discrete Global Grid System"
+  description: |
+     DGGS Demo at BiDS'25
+  keywords:
+    - Earth Observation
+    - DGGS
+    - healpix
+    - AI
+    - Python
+    - Cloud computing
+    - EO processing
+  authors:
+    - name: Tina Odaka
+      orcid: 0000-0002-1500-0156
+      email: tina.odaka@ifremer.fr 
+      affiliations:
+        - IFREMER, France
+      roles:
+        - Software
+  affiliations:
+    - name: IFREMER
+      address: |
+         Research institute in Plouzané, France
+      url: https://www.ifremer.fr
+      ror: https://ror.org/044jxhp58
+  github: https://github.com/EOPF-DGGS/DGGS_Examples
+  license:
+    code: MIT
+    content: CC-BY-4.0
+  date: 2025-09-25
+  venue:
+    title: "DGGS@BiDS'25"
+    location: "Riga, Latvia"
+  funding:
+    - statement: |
+        This demo was developed as part of the GRID4EARTH ESA Funded project.
+  open_access: true
+  subject: Earth and Environmental Sciences
+  
+  toc:
+    - file: index.md
+    - file: metadata/example-dggs-cf.ipynb
+site:
+  title: "DGGS demo at BiDS'25"
+  template: book-theme
+  actions:
+    - title: "View on GitHub"
+      url: https://github.com/EOPF-DGGS/DGGS_examples
+  domains:
+    - eopf-dggs.github.io
+  options:
+    favicon: images/favicon.ico
+    logo: images/grid4earth_logo.png
+    logo_text: "GRID4EARTH Logo"
+    hide_title: false
+    hide_outline: false
+    hide_footertext: false
+#    style: ./static/custom.css
+
+# MyST Markdown configuration
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
+
+# Execution settings
+execute:
+  execute_notebooks: auto
+  cache: .jupyter_cache
+  timeout: 120
+
+# Export settings
+exports:
+  - format: tex
+    template: null
+    output: exports/eopf-dggs-demo.tex
+
+# References
+references:
+  bibliography: 
+    - references.bib
+
+# Thebe configuration for live code execution
+thebe:
+  server:
+    url: "https://mybinder.org"
+    repo: "EOPF-DGGS/DGGS_examples"
+    ref: "main"

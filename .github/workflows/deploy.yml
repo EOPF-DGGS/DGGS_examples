@@ -38,15 +38,13 @@ jobs:
       - name: Set up environment
         uses: mamba-org/setup-micromamba@v1
         with:
-          environment-file: environment.yml
+          environment-file: .binder/environment.yml
           environment-name: eopf-zarr
           condarc: |
             channels:
               - conda-forge
       - name: Install MyST Markdown
         run: micromamba run -n eopf-zarr pip install --pre "jupyter-book==2.*"
-      - name: Generate Jupyterhub button
-        run: micromamba run -n eopf-zarr python src/add_jupyterhub_buttons.py
       - name: Execute Jupyter Notebooks and Build HTML Assets
         run: micromamba run -n eopf-zarr jupyter-book build --html
       - name: Upload artifact
