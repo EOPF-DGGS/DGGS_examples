@@ -1,9 +1,10 @@
-name: eopf-zarr
+name: dggs-zarr
 channels:
   - conda-forge
 dependencies:
   - python=3.11
   - xarray
+  - xdggs
   - xarray-eopf>=0.1.1
   - xcube-eopf>=0.1.0
   - xcube-stac
