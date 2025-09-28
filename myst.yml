@@ -56,7 +56,7 @@ site:
   options:
     favicon: images/favicon.ico
     logo: images/grid4earth_logo.png
-    logo_text: "GRID4EARTH Logo"
+    logo_text: "GRID4EARTH"
     hide_title: false
     hide_outline: false
     hide_footertext: false
