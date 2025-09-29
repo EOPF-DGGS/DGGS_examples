@@ -45,6 +45,7 @@ project:
     - file: index.md
     - file: notebooks/example-dggs-cf.ipynb
     - file: notebooks/regrid-climatedt.ipynb
+    - file: notebooks/EOPF_UTM_to_HEALPix.ipynb
 site:
   title: "DGGS demo at BiDS'25"
   template: book-theme
