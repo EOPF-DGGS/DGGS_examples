@@ -43,8 +43,8 @@ project:
   
   toc:
     - file: index.md
-    - file: metadata/example-dggs-cf.ipynb
-    - file: metadata/regrid-climatedt.ipynb
+    - file: notebooks/example-dggs-cf.ipynb
+    - file: notebooks/regrid-climatedt.ipynb
 site:
   title: "DGGS demo at BiDS'25"
   template: book-theme
