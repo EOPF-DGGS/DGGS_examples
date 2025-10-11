@@ -46,7 +46,8 @@ jobs:
       - name: Install MyST Markdown
         run: micromamba run -n dggs-zarr pip install --pre "jupyter-book==2.*"
       - name: Execute Jupyter Notebooks and Build HTML Assets
-        run: micromamba run -n dggs-zarr jupyter-book build --html --execute
+        run: micromamba run -n dggs-zarr jupyter-book build --html
+#        run: micromamba run -n dggs-zarr jupyter-book build --html --execute
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
